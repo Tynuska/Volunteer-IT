@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+}
+
+* ::before,
+::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #d1e7e0;
+  font-family: Montserrat, Arial, sans-serif;
+  color: #3e3b3b;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  padding: 25px 20px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+}
+
+.navigation__logo {
+  font-size: 22px;
+  color: #8b7abc;
+  font-weight: 600;
+}
+
+.navigation__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation__item {
+  color: #8b7abc;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.navigation__item:hover {
+  text-decoration: underline;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flexbox--image {
+  width: 510px;
+}
+
+.flexbox--text {
+  background-color: #efeaea;
+  padding: 30px 38px 18px;
+  border-radius: 5px;
+}
+
+.flexbox--paragraph {
+  padding-bottom: 20px;
+}
+
+.hero {
+  background-image: "/images/School.jpg";
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media screen and (min-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid--text {
+    height: 135px;
+  }
+}
+.grid--head {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.grid--text {
+  background-color: #d2cce3;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grid--padding-bottom {
+  padding-bottom: 15px;
+}/*# sourceMappingURL=style.css.map */
