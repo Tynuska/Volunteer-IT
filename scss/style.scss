@@ -30,7 +30,7 @@ h3 {
 
 body {
   background-color: $secondary;
-  color: $primary;
+  color: $text-color;
   font-family: $font-base;
   font-size: $text-size;
 }
@@ -40,7 +40,7 @@ img {
 }
 
 .container {
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 // navigation
@@ -79,7 +79,8 @@ img {
   text-align: center;
 }
 
-.about--headline {
+//headline
+.about__headline {
   font-size: 28px;
   color: $text-color;
   font-weight: 600;
@@ -90,7 +91,16 @@ img {
 .hero {
   background-image: url('/images/library.jpg');
   width: 1100px;
-  height: 590px;
+  height: 30vh;
+  background-size: contain;
+}
+
+.hero--headline {
+  font-size: 28px;
+  color: $text-color;
+  font-weight: 600;
+  color: $text-color-secondary;
+  padding: 20px 0 0 25px;
 }
 
 .intro {
@@ -107,46 +117,126 @@ img {
   flex-basis: 50%;
 }
 
+.intro__text {
+  background-color: $primary;
+  color: $text-color-secondary;
+  padding: 30px 25px;
+}
+
+.intro__item {
+  padding-bottom: 10px;
+}
+
 h2 {
-  font-size: 24px;
+  font-size: 20px;
   color: $text-color;
-  font-weight: 600px;
+  font-weight: 600;
   text-align: center;
+  padding: 20px;
 }
 
 h3 {
-  font-size: 21px;
+  font-size: 18px;
   color: $text-color;
-  font-weight: 600px;
+  font-weight: 600;
   text-align: center;
+  padding: 15px 0;
 }
 
 // Kam vyrazit
 .columns {
   display: flex;
-  &--icon {
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
+
+  &__icon {
     width: 20px;
     height: auto;
+    padding-bottom: 10px;
   }
-  &--item {
+  &__column {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 //button
-.button {
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons__button {
   padding: 10px 20px;
   background-color: $primary;
   color: $text-color-secondary;
   display: inline-block;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 45px;
+  &:hover {
+    color: $primary;
+    background-color: $text-color-secondary;
+    // font-weight: 400;
+    border: 2px solid $primary;
+  }
 }
 
 // PŘED CESTOU
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  &__head {
+    padding-bottom: 15px;
+  }
+
+  &__text {
+    height: 135px;
+    background-color: $primary;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: $text-color-secondary;
+  }
+
+  &__padding-bottom {
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 //footer
+// .footer {
+//   display: flex;
+//   flex-direction: space-between;
+//   flex-direction: column;
+//   align-items: center;
+//   background-color: $primary;
+//   color: $text-color-secondary;
+//   gap: 10px;
+//   padding: 30px;
+// }
+
 .footer {
-  display: flex;
-  flex-direction: space-between;
+  background-color: $primary;
 }

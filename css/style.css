@@ -18,7 +18,7 @@ h3 {
 
 body {
   background-color: #d1e7e0;
-  color: #463558;
+  color: #161718;
   font-family: "Montserrat", Arial, "sans-serif";
   font-size: 16px;
 }
@@ -28,7 +28,7 @@ img {
 }
 
 .container {
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 .navigation {
@@ -66,7 +66,7 @@ img {
   text-align: center;
 }
 
-.about--headline {
+.about__headline {
   font-size: 28px;
   color: #161718;
   font-weight: 600;
@@ -76,7 +76,16 @@ img {
 .hero {
   background-image: url("/images/library.jpg");
   width: 1100px;
-  height: 590px;
+  height: 30vh;
+  background-size: contain;
+}
+
+.hero--headline {
+  font-size: 28px;
+  color: #161718;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 20px 0 0 25px;
 }
 
 .intro {
@@ -93,41 +102,105 @@ img {
   flex-basis: 50%;
 }
 
+.intro__text {
+  background-color: #463558;
+  color: #ffffff;
+  padding: 30px 25px;
+}
+
+.intro__item {
+  padding-bottom: 10px;
+}
+
 h2 {
-  font-size: 24px;
+  font-size: 20px;
   color: #161718;
-  font-weight: 600px;
+  font-weight: 600;
   text-align: center;
+  padding: 20px;
 }
 
 h3 {
-  font-size: 21px;
+  font-size: 18px;
   color: #161718;
-  font-weight: 600px;
+  font-weight: 600;
   text-align: center;
+  padding: 15px 0;
 }
 
 .columns {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 20px;
 }
-.columns--icon {
+.columns__icon {
   width: 20px;
   height: auto;
+  padding-bottom: 10px;
 }
-.columns--item {
+.columns__column {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+.columns__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.button {
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons__button {
   padding: 10px 20px;
   background-color: #463558;
   color: #ffffff;
   display: inline-block;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-bottom: 45px;
+}
+.buttons__button:hover {
+  color: #463558;
+  background-color: #ffffff;
+  border: 2px solid #463558;
 }
 
-.footer {
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.grid__head {
+  padding-bottom: 15px;
+}
+.grid__text {
+  height: 135px;
+  background-color: #463558;
+  padding: 15px;
+  border-radius: 5px;
   display: flex;
-  flex-direction: space-between;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+.grid__padding-bottom {
+  padding-bottom: 15px;
+}
+
+@media screen and (min-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.footer {
+  background-color: #463558;
 }/*# sourceMappingURL=style.css.map */
