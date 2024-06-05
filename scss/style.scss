@@ -40,10 +40,15 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: $primary;
+  font-weight: 500;
+}
+
 .container {
-  padding: 0 20px 15px;
+  padding-inline: 20px;
   @media screen and (min-width: 1100px) {
-    padding: 0 130px 50px;
+    padding-inline: 130px;
   }
 }
 
@@ -54,7 +59,7 @@ img {
   justify-content: space-between;
   margin: 20px;
   @media screen and (min-width: 1100px) {
-    margin: 50px 20px 70px;
+    margin: 50px 50px 70px;
   }
 }
 
@@ -62,6 +67,7 @@ img {
   font-size: 20px;
   font-weight: 700;
   color: $primary;
+  text-decoration: none;
   @media screen and (min-width: 1100px) {
     font-size: 40px;
     font-weight: 600;
@@ -98,6 +104,7 @@ img {
 //home
 .about {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 //headline
@@ -113,16 +120,18 @@ img {
 }
 
 .about__paragraph {
-  padding-bottom: 20px;
+  padding-bottom: 13px;
   text-align: center;
   @media screen and (min-width: 1100px) {
-    padding-bottom: 25px;
+    font-size: 22px;
   }
 }
 
 //hero banner
 .hero {
-  background-image: url('/images/library.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/images/library.jpg');
+
   // width: 1100px;
   height: 40vh;
   background-size: cover;
@@ -137,20 +146,18 @@ img {
 }
 
 .hero--headline {
-  font-size: 28px;
+  font-size: 40px;
   color: $text-color;
   font-weight: 600;
   color: $text-color-secondary;
   padding: 50px 0 0 40px;
-  @media screen and (min-width: 655px) {
-    padding: 100px 0 0 90px;
-  }
 }
 
 .intro {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+
   &__background {
     background-color: $primary;
     color: $text-color-secondary;
@@ -163,72 +170,100 @@ img {
 .intro__image,
 .intro__text {
   flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (min-width: 1100px) {
+    width: 50%;
+  }
 }
-
-// .intro__image {
-//   max-width: 500px;
-// }
 
 .intro__text {
   background-color: $primary;
   color: $text-color-secondary;
-  padding: 25px;
   font-weight: 500;
-}
-
-.intro__item {
-  padding-bottom: 20px;
+  gap: 23px;
+  padding: 30px;
   text-align: center;
+  @media screen and (min-width: 1100px) {
+    padding-block: 0px;
+    text-align: left;
+  }
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 28px;
   color: $text-color;
   font-weight: 600;
-  padding: 20px;
+  padding: 30px;
   text-align: center;
+
   @media screen and (min-width: 1100px) {
-    padding: 50px;
+    padding: 40px;
+    font-size: 32px;
   }
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 22px;
   color: $text-color;
   font-weight: 600;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  color: $primary;
+  @media screen and (min-width: 1100px) {
+    font-size: 22px;
+    padding-bottom: 15px;
+  }
 }
 
 // Kam vyrazit
 .columns {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 30px;
   // padding-bottom: 20px;
 
   &__icon {
     width: 20px;
     height: auto;
-    padding-bottom: 10px;
   }
   &__column {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 23px;
     text-align: center;
+    margin-bottom: 20px;
+
+    &--footer {
+      background-color: $primary;
+      color: $text-color-secondary;
+      padding: 20px;
+      margin-bottom: 0;
+      @media screen and (min-width: 1100px) {
+        flex-direction: row;
+        gap: 40px;
+        align-items: center;
+      }
+    }
   }
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
+    @media screen and (min-width: 1100px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      text-align: left;
+    }
   }
 
   @media screen and (min-width: 1100px) {
     flex-direction: row;
     gap: 20px;
-    padding-bottom: 50px;
+    // padding-bottom: 50px;
   }
 }
 
@@ -246,7 +281,10 @@ h3 {
   border-radius: 15px;
   text-decoration: none;
   font-weight: 500;
-  margin: 45px;
+  margin: 20px;
+  @media screen and (min-width: 1100px) {
+    margin: 40px;
+  }
   &:hover {
     color: $primary;
     background-color: $text-color-secondary;
@@ -275,6 +313,14 @@ h3 {
     justify-content: center;
     text-align: center;
     color: $text-color-secondary;
+    @media screen and (min-width: 1100px) {
+      margin: 40px;
+    }
+  }
+
+  &__item--img {
+    display: flex;
+    justify-content: center;
   }
 
   &__padding-bottom {
@@ -305,8 +351,8 @@ h3 {
 //   padding: 30px;
 // }
 
-.columns__column--footer {
-  background-color: $primary;
-  color: $text-color-secondary;
-  padding: 20px;
-}
+// .columns__column--footer {
+//   background-color: $primary;
+//   color: $text-color-secondary;
+//   padding: 20px;
+// }
