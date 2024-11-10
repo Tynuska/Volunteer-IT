@@ -25,7 +25,7 @@ body {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
 }
 
 a {
@@ -36,10 +36,9 @@ a {
 .container {
   padding-inline: 20px;
 }
-
 @media screen and (min-width: 1100px) {
   .container {
-    padding-inline: 130px;
+    padding-inline: 240px;
   }
 }
 
@@ -49,7 +48,6 @@ a {
   justify-content: space-between;
   margin: 20px;
 }
-
 @media screen and (min-width: 1100px) {
   .navigation {
     margin: 50px 50px 70px;
@@ -62,7 +60,6 @@ a {
   color: #463558;
   text-decoration: none;
 }
-
 @media screen and (min-width: 1100px) {
   .navigation__logo {
     font-size: 40px;
@@ -76,7 +73,6 @@ a {
   align-items: flex-start;
   gap: 7px;
 }
-
 @media screen and (min-width: 1100px) {
   .navigation__items {
     flex-direction: row;
@@ -90,13 +86,11 @@ a {
   font-weight: 700;
   text-decoration: none;
 }
-
 .navigation__item:hover {
   color: #d1e7e0;
   background-color: #463558;
   text-decoration: underline;
 }
-
 @media screen and (min-width: 1100px) {
   .navigation__item {
     font-size: 28px;
@@ -107,6 +101,7 @@ a {
 .about {
   text-align: center;
   margin-bottom: 50px;
+  margin-inline: 70px;
 }
 
 .about__headline {
@@ -116,7 +111,6 @@ a {
   text-align: center;
   padding-bottom: 15px;
 }
-
 @media screen and (min-width: 1100px) {
   .about__headline {
     padding-bottom: 50px;
@@ -127,22 +121,21 @@ a {
   padding-bottom: 13px;
   text-align: center;
 }
-
 @media screen and (min-width: 1100px) {
   .about__paragraph {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/library.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/n-library.jpg");
   height: 40vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin-inline: auto;
+  margin-bottom: 50px;
 }
-
 @media screen and (min-width: 655px) {
   .hero {
     height: 60vh;
@@ -163,12 +156,10 @@ a {
   flex-direction: column;
   margin-top: 20px;
 }
-
 .intro__background {
   background-color: #463558;
   color: #ffffff;
 }
-
 @media screen and (min-width: 1100px) {
   .intro {
     flex-direction: row;
@@ -182,9 +173,7 @@ a {
   flex-direction: column;
   justify-content: center;
 }
-
 @media screen and (min-width: 1100px) {
-
   .intro__image,
   .intro__text {
     width: 50%;
@@ -199,7 +188,6 @@ a {
   padding: 30px;
   text-align: center;
 }
-
 @media screen and (min-width: 1100px) {
   .intro__text {
     padding-block: 0px;
@@ -214,7 +202,6 @@ h2 {
   padding: 30px;
   text-align: center;
 }
-
 @media screen and (min-width: 1100px) {
   h2 {
     padding: 40px;
@@ -230,7 +217,6 @@ h3 {
   padding-bottom: 5px;
   color: #463558;
 }
-
 @media screen and (min-width: 1100px) {
   h3 {
     font-size: 22px;
@@ -243,12 +229,10 @@ h3 {
   flex-direction: column;
   gap: 30px;
 }
-
 .columns__icon {
   width: 20px;
   height: auto;
 }
-
 .columns__column {
   display: flex;
   flex-direction: column;
@@ -257,19 +241,12 @@ h3 {
   text-align: center;
   margin-bottom: 20px;
 }
-
-.columns__column--margin {
-  margin: 0 130px 50px;
-}
-
-
 .columns__column--footer {
   background-color: #463558;
   color: #ffffff;
   padding: 20px;
   margin-bottom: 0;
 }
-
 @media screen and (min-width: 1100px) {
   .columns__column--footer {
     flex-direction: row;
@@ -277,14 +254,12 @@ h3 {
     align-items: center;
   }
 }
-
 .columns__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-
 @media screen and (min-width: 1100px) {
   .columns__item {
     flex-direction: row;
@@ -292,7 +267,6 @@ h3 {
     text-align: left;
   }
 }
-
 @media screen and (min-width: 1100px) {
   .columns {
     flex-direction: row;
@@ -306,26 +280,28 @@ h3 {
 }
 
 .buttons__button {
-  padding: 10px 20px;
+  padding-block: 10px;
+  text-align: center;
   background-color: #463558;
   color: #ffffff;
   display: inline-block;
   border-radius: 15px;
   text-decoration: none;
   font-weight: 500;
-  margin: 20px;
+  width: 200px;
 }
-
-@media screen and (min-width: 1100px) {
-  .buttons__button {
-    margin: 40px;
-  }
-}
-
 .buttons__button:hover {
   color: #463558;
   background-color: #ffffff;
   border: 2px solid #463558;
+}
+.buttons__button--margin {
+  margin: 10px 0 30px;
+}
+@media screen and (min-width: 1100px) {
+  .buttons__button--margin {
+    margin: 30px 0 50px;
+  }
 }
 
 .grid {
@@ -333,12 +309,11 @@ h3 {
   grid-template-columns: 1fr;
   gap: 20px;
   margin-top: 20px;
+  justify-items: center;
 }
-
 .grid__head {
   padding-bottom: 15px;
 }
-
 .grid__text {
   height: 135px;
   background-color: #463558;
@@ -350,30 +325,19 @@ h3 {
   text-align: center;
   color: #ffffff;
 }
-
-@media screen and (min-width: 1100px) {
-  .grid__text {
-    margin: 40px;
-  }
-}
-
 .grid__item--img {
   display: flex;
   justify-content: center;
 }
-
 .grid__padding-bottom {
   padding-bottom: 15px;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 1300px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
 .link--white {
   color: #ffffff;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
