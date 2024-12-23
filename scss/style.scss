@@ -104,8 +104,11 @@ a {
 //home
 .about {
   text-align: center;
-  margin-bottom: 50px;
-  margin-inline: 70px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 1100px) {
+    padding: 50px;
+  }
 }
 
 //headline
@@ -128,10 +131,16 @@ a {
   }
 }
 
+.about__image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
 //hero banner
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('/images/n-library.jpg');
+    url('/images/nep-hero.jpg');
 
   // width: 1100px;
   height: 40vh;
@@ -139,7 +148,12 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   margin-inline: auto;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
+
+  &--organizace {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('/images/org-hero.jpg');
+  }
 
   @media screen and (min-width: 655px) {
     height: 60vh;
@@ -158,7 +172,6 @@ a {
 .intro {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
 
   &__background {
     background-color: $primary;
@@ -188,7 +201,7 @@ a {
   padding: 30px;
   text-align: center;
   @media screen and (min-width: 1100px) {
-    padding-block: 0px;
+    // padding-block: 0px;
     text-align: left;
   }
 }
@@ -201,7 +214,7 @@ h2 {
   text-align: center;
 
   @media screen and (min-width: 1100px) {
-    padding: 40px;
+    padding: 80px 40px 40px;
     font-size: 32px;
   }
 }
@@ -236,7 +249,7 @@ h3 {
     justify-content: center;
     gap: 23px;
     text-align: center;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
 
     &--footer {
       background-color: $primary;
@@ -247,6 +260,13 @@ h3 {
         flex-direction: row;
         gap: 40px;
         align-items: center;
+      }
+    }
+
+    &--margin {
+      margin-bottom: 50px;
+      @media screen and (min-width: 1100px) {
+        margin-inline: 70px;
       }
     }
   }
@@ -276,7 +296,7 @@ h3 {
 }
 
 .buttons__button {
-  padding-block: 10px;
+  padding: 10px;
   text-align: center;
   background-color: $primary;
   color: $text-color-secondary;
@@ -345,21 +365,3 @@ h3 {
 .link--white {
   color: $text-color-secondary;
 }
-
-//footer
-// .footer {
-//   display: flex;
-//   flex-direction: space-between;
-//   flex-direction: column;
-//   align-items: center;
-//   background-color: $primary;
-//   color: $text-color-secondary;
-//   gap: 10px;
-//   padding: 30px;
-// }
-
-// .columns__column--footer {
-//   background-color: $primary;
-//   color: $text-color-secondary;
-//   padding: 20px;
-// }

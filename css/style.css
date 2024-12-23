@@ -100,8 +100,13 @@ a {
 
 .about {
   text-align: center;
-  margin-bottom: 50px;
-  margin-inline: 70px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1100px) {
+  .about {
+    padding: 50px;
+  }
 }
 
 .about__headline {
@@ -127,14 +132,22 @@ a {
   }
 }
 
+.about__image {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/n-library.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/nep-hero.jpg");
   height: 40vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin-inline: auto;
-  margin-bottom: 50px;
+}
+.hero--organizace {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/org-hero.jpg");
 }
 @media screen and (min-width: 655px) {
   .hero {
@@ -154,7 +167,6 @@ a {
 .intro {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
 }
 .intro__background {
   background-color: #463558;
@@ -190,7 +202,6 @@ a {
 }
 @media screen and (min-width: 1100px) {
   .intro__text {
-    padding-block: 0px;
     text-align: left;
   }
 }
@@ -204,7 +215,7 @@ h2 {
 }
 @media screen and (min-width: 1100px) {
   h2 {
-    padding: 40px;
+    padding: 80px 40px 40px;
     font-size: 32px;
   }
 }
@@ -239,7 +250,6 @@ h3 {
   justify-content: center;
   gap: 23px;
   text-align: center;
-  margin-bottom: 20px;
 }
 .columns__column--footer {
   background-color: #463558;
@@ -252,6 +262,14 @@ h3 {
     flex-direction: row;
     gap: 40px;
     align-items: center;
+  }
+}
+.columns__column--margin {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1100px) {
+  .columns__column--margin {
+    margin-inline: 70px;
   }
 }
 .columns__item {
@@ -280,7 +298,7 @@ h3 {
 }
 
 .buttons__button {
-  padding-block: 10px;
+  padding: 10px;
   text-align: center;
   background-color: #463558;
   color: #ffffff;
