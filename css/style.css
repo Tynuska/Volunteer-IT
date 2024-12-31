@@ -337,7 +337,7 @@ h3 {
 .grid__text {
   height: 200px;
   background-color: #463558;
-  padding: 15px;
+  padding: 25px;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
